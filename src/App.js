@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+import TestComponent from "./TestComponent";
 
 class App extends React.Component {
   state = {
@@ -19,6 +20,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <TestComponent />
           <div className="App-intro">
             <h2>Clients</h2>
             {clients.map((client) => (
