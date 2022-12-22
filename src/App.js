@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import TestComponent from "./TestComponent";
+import ClientRow from "./ClientRow";
 
 class App extends React.Component {
   state = {
@@ -13,20 +12,21 @@ class App extends React.Component {
     const body = await response.json();
     this.setState({ clients: body });
   }
-
   render() {
     const { clients } = this.state;
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <TestComponent />
+          <h2>Clients</h2>
           <div className="App-intro">
-            <h2>Clients</h2>
             {clients.map((client) => (
-              <div key={client.id}>
-                {client.name} ({client.email})
-              </div>
+              <ClientRow
+                client={{
+                  name: client.name,
+                  email: client.email,
+                  id: client.id,
+                }}
+              />
             ))}
           </div>
         </header>
