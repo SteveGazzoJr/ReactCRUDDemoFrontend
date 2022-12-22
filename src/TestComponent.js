@@ -15,7 +15,7 @@ class TestComponent extends React.Component {
     const { clients } = this.state;
     return (
       <div className="TestComponent">
-        <h1>REFERENCED ANOTHER COMPONENT HECK YEAH!</h1>
+        <h1>REFERENCED ANOTHER COMPONENT HECK YEAH! DID I BREAK GIT THOUGH?</h1>
       </div>
     );
   }
